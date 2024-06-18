@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Quanta.dir/src/VM.c.o CMakeFiles/Quanta.dir/src/instruction.c.o CMakeFiles/Quanta.dir/src/main.c.o CMakeFiles/Quanta.dir/src/program.c.o -o Quanta

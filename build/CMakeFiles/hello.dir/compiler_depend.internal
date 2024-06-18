@@ -3,6 +3,7 @@
 
 CMakeFiles/hello.dir/src/hello.c.o
  /home/hellbats/Code/QuantaVM/src/hello.c
+ /home/hellbats/Code/QuantaVM/src/include/hell.h
  /usr/include/bits/floatn-common.h
  /usr/include/bits/floatn.h
  /usr/include/bits/libc-header-start.h

@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/VM.c.o -c /home/hellbats/Code/QuantaVM/src/VM.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/VM.c",
+  "output": "CMakeFiles/Quanta.dir/src/VM.c.o"
+},
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/instruction.c.o -c /home/hellbats/Code/QuantaVM/src/instruction.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/instruction.c",
+  "output": "CMakeFiles/Quanta.dir/src/instruction.c.o"
+},
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/main.c.o -c /home/hellbats/Code/QuantaVM/src/main.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/main.c",
+  "output": "CMakeFiles/Quanta.dir/src/main.c.o"
+},
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/program.c.o -c /home/hellbats/Code/QuantaVM/src/program.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/program.c",
+  "output": "CMakeFiles/Quanta.dir/src/program.c.o"
+}
+]

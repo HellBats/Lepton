@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "cstdint": "c",
+        "program.h": "c",
+        "vector": "c"
+    }
+}

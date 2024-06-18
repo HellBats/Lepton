@@ -117,41 +117,113 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello
+# Target rules for targets named Quanta
 
 # Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
+Quanta: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Quanta
+.PHONY : Quanta
 
 # fast build rule for target.
-hello/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+Quanta/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/build
+.PHONY : Quanta/fast
 
-src/hello.o: src/hello.c.o
-.PHONY : src/hello.o
+src/VM.o: src/VM.c.o
+.PHONY : src/VM.o
 
 # target to build an object file
-src/hello.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.c.o
-.PHONY : src/hello.c.o
+src/VM.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/VM.c.o
+.PHONY : src/VM.c.o
 
-src/hello.i: src/hello.c.i
-.PHONY : src/hello.i
+src/VM.i: src/VM.c.i
+.PHONY : src/VM.i
 
 # target to preprocess a source file
-src/hello.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.c.i
-.PHONY : src/hello.c.i
+src/VM.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/VM.c.i
+.PHONY : src/VM.c.i
 
-src/hello.s: src/hello.c.s
-.PHONY : src/hello.s
+src/VM.s: src/VM.c.s
+.PHONY : src/VM.s
 
 # target to generate assembly for a file
-src/hello.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.c.s
-.PHONY : src/hello.c.s
+src/VM.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/VM.c.s
+.PHONY : src/VM.c.s
+
+src/instruction.o: src/instruction.c.o
+.PHONY : src/instruction.o
+
+# target to build an object file
+src/instruction.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/instruction.c.o
+.PHONY : src/instruction.c.o
+
+src/instruction.i: src/instruction.c.i
+.PHONY : src/instruction.i
+
+# target to preprocess a source file
+src/instruction.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/instruction.c.i
+.PHONY : src/instruction.c.i
+
+src/instruction.s: src/instruction.c.s
+.PHONY : src/instruction.s
+
+# target to generate assembly for a file
+src/instruction.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/instruction.c.s
+.PHONY : src/instruction.c.s
+
+src/main.o: src/main.c.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/program.o: src/program.c.o
+.PHONY : src/program.o
+
+# target to build an object file
+src/program.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/program.c.o
+.PHONY : src/program.c.o
+
+src/program.i: src/program.c.i
+.PHONY : src/program.i
+
+# target to preprocess a source file
+src/program.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/program.c.i
+.PHONY : src/program.c.i
+
+src/program.s: src/program.c.s
+.PHONY : src/program.s
+
+# target to generate assembly for a file
+src/program.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/program.c.s
+.PHONY : src/program.c.s
 
 # Help Target
 help:
@@ -161,10 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hello"
-	@echo "... src/hello.o"
-	@echo "... src/hello.i"
-	@echo "... src/hello.s"
+	@echo "... Quanta"
+	@echo "... src/VM.o"
+	@echo "... src/VM.i"
+	@echo "... src/VM.s"
+	@echo "... src/instruction.o"
+	@echo "... src/instruction.i"
+	@echo "... src/instruction.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/program.o"
+	@echo "... src/program.i"
+	@echo "... src/program.s"
 .PHONY : help
 
 
