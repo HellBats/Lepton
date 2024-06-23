@@ -20,7 +20,7 @@ uint8_t vecget(vector *vec,unsigned int index)
     return *(vec->ptr+index);
 }
 
-void vecset(vector *vec,unsigned int index,int value)
+void vecset(vector *vec,unsigned int index,uint8_t value)
 {   if(index==vec->size-1)
     {
         Reallocate(vec);

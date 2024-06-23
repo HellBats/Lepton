@@ -11,5 +11,5 @@ typedef struct Vector
 vector* NewVec(unsigned int size);
 void Reallocate(vector *vec);
 uint8_t vecget(vector *vec,unsigned int index);
-void vecset(vector *vec,unsigned int index,int value);
+void vecset(vector *vec,unsigned int index,uint8_t value);
 #endif

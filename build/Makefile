@@ -129,6 +129,30 @@ Quanta/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/build
 .PHONY : Quanta/fast
 
+src/REPL.o: src/REPL.c.o
+.PHONY : src/REPL.o
+
+# target to build an object file
+src/REPL.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/REPL.c.o
+.PHONY : src/REPL.c.o
+
+src/REPL.i: src/REPL.c.i
+.PHONY : src/REPL.i
+
+# target to preprocess a source file
+src/REPL.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/REPL.c.i
+.PHONY : src/REPL.c.i
+
+src/REPL.s: src/REPL.c.s
+.PHONY : src/REPL.s
+
+# target to generate assembly for a file
+src/REPL.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quanta.dir/build.make CMakeFiles/Quanta.dir/src/REPL.c.s
+.PHONY : src/REPL.c.s
+
 src/VM.o: src/VM.c.o
 .PHONY : src/VM.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Quanta"
+	@echo "... src/REPL.o"
+	@echo "... src/REPL.i"
+	@echo "... src/REPL.s"
 	@echo "... src/VM.o"
 	@echo "... src/VM.i"
 	@echo "... src/VM.s"

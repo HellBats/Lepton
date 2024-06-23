@@ -1,5 +1,5 @@
-CMakeFiles/Quanta.dir/src/main.c.o: \
- /home/hellbats/Code/QuantaVM/src/main.c /usr/include/stdc-predef.h \
+CMakeFiles/Quanta.dir/src/REPL.c.o: \
+ /home/hellbats/Code/QuantaVM/src/REPL.c /usr/include/stdc-predef.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -14,12 +14,15 @@ CMakeFiles/Quanta.dir/src/main.c.o: \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h \
- /home/hellbats/Code/QuantaVM/src/include/VM.h \
+ /usr/include/bits/floatn-common.h /usr/include/string.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h \
  /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
+ /home/hellbats/Code/QuantaVM/src/include/REPL.h \
+ /home/hellbats/Code/QuantaVM/src/include/VM.h \
  /home/hellbats/Code/QuantaVM/src/include/program.h /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
@@ -37,6 +40,5 @@ CMakeFiles/Quanta.dir/src/main.c.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
  /home/hellbats/Code/QuantaVM/src/include/instruction.h \
- /home/hellbats/Code/QuantaVM/src/include/program.h \
- /home/hellbats/Code/QuantaVM/src/include/REPL.h \
- /home/hellbats/Code/QuantaVM/src/include/VM.h
+ /home/hellbats/Code/QuantaVM/src/include/VM.h \
+ /home/hellbats/Code/QuantaVM/src/include/program.h

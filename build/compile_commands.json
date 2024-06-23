@@ -1,6 +1,12 @@
 [
 {
   "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/REPL.c.o -c /home/hellbats/Code/QuantaVM/src/REPL.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/REPL.c",
+  "output": "CMakeFiles/Quanta.dir/src/REPL.c.o"
+},
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
   "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/VM.c.o -c /home/hellbats/Code/QuantaVM/src/VM.c",
   "file": "/home/hellbats/Code/QuantaVM/src/VM.c",
   "output": "CMakeFiles/Quanta.dir/src/VM.c.o"

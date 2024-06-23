@@ -69,10 +69,24 @@ include CMakeFiles/Quanta.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Quanta.dir/flags.make
 
+CMakeFiles/Quanta.dir/src/REPL.c.o: CMakeFiles/Quanta.dir/flags.make
+CMakeFiles/Quanta.dir/src/REPL.c.o: /home/hellbats/Code/QuantaVM/src/REPL.c
+CMakeFiles/Quanta.dir/src/REPL.c.o: CMakeFiles/Quanta.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Quanta.dir/src/REPL.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Quanta.dir/src/REPL.c.o -MF CMakeFiles/Quanta.dir/src/REPL.c.o.d -o CMakeFiles/Quanta.dir/src/REPL.c.o -c /home/hellbats/Code/QuantaVM/src/REPL.c
+
+CMakeFiles/Quanta.dir/src/REPL.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Quanta.dir/src/REPL.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hellbats/Code/QuantaVM/src/REPL.c > CMakeFiles/Quanta.dir/src/REPL.c.i
+
+CMakeFiles/Quanta.dir/src/REPL.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Quanta.dir/src/REPL.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hellbats/Code/QuantaVM/src/REPL.c -o CMakeFiles/Quanta.dir/src/REPL.c.s
+
 CMakeFiles/Quanta.dir/src/VM.c.o: CMakeFiles/Quanta.dir/flags.make
 CMakeFiles/Quanta.dir/src/VM.c.o: /home/hellbats/Code/QuantaVM/src/VM.c
 CMakeFiles/Quanta.dir/src/VM.c.o: CMakeFiles/Quanta.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Quanta.dir/src/VM.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Quanta.dir/src/VM.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Quanta.dir/src/VM.c.o -MF CMakeFiles/Quanta.dir/src/VM.c.o.d -o CMakeFiles/Quanta.dir/src/VM.c.o -c /home/hellbats/Code/QuantaVM/src/VM.c
 
 CMakeFiles/Quanta.dir/src/VM.c.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/Quanta.dir/src/VM.c.s: cmake_force
 CMakeFiles/Quanta.dir/src/instruction.c.o: CMakeFiles/Quanta.dir/flags.make
 CMakeFiles/Quanta.dir/src/instruction.c.o: /home/hellbats/Code/QuantaVM/src/instruction.c
 CMakeFiles/Quanta.dir/src/instruction.c.o: CMakeFiles/Quanta.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Quanta.dir/src/instruction.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Quanta.dir/src/instruction.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Quanta.dir/src/instruction.c.o -MF CMakeFiles/Quanta.dir/src/instruction.c.o.d -o CMakeFiles/Quanta.dir/src/instruction.c.o -c /home/hellbats/Code/QuantaVM/src/instruction.c
 
 CMakeFiles/Quanta.dir/src/instruction.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/Quanta.dir/src/instruction.c.s: cmake_force
 CMakeFiles/Quanta.dir/src/main.c.o: CMakeFiles/Quanta.dir/flags.make
 CMakeFiles/Quanta.dir/src/main.c.o: /home/hellbats/Code/QuantaVM/src/main.c
 CMakeFiles/Quanta.dir/src/main.c.o: CMakeFiles/Quanta.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Quanta.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Quanta.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Quanta.dir/src/main.c.o -MF CMakeFiles/Quanta.dir/src/main.c.o.d -o CMakeFiles/Quanta.dir/src/main.c.o -c /home/hellbats/Code/QuantaVM/src/main.c
 
 CMakeFiles/Quanta.dir/src/main.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Quanta.dir/src/main.c.s: cmake_force
 CMakeFiles/Quanta.dir/src/program.c.o: CMakeFiles/Quanta.dir/flags.make
 CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.c
 CMakeFiles/Quanta.dir/src/program.c.o: CMakeFiles/Quanta.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Quanta.dir/src/program.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Quanta.dir/src/program.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Quanta.dir/src/program.c.o -MF CMakeFiles/Quanta.dir/src/program.c.o.d -o CMakeFiles/Quanta.dir/src/program.c.o -c /home/hellbats/Code/QuantaVM/src/program.c
 
 CMakeFiles/Quanta.dir/src/program.c.i: cmake_force
@@ -127,6 +141,7 @@ CMakeFiles/Quanta.dir/src/program.c.s: cmake_force
 
 # Object files for target Quanta
 Quanta_OBJECTS = \
+"CMakeFiles/Quanta.dir/src/REPL.c.o" \
 "CMakeFiles/Quanta.dir/src/VM.c.o" \
 "CMakeFiles/Quanta.dir/src/instruction.c.o" \
 "CMakeFiles/Quanta.dir/src/main.c.o" \
@@ -135,13 +150,14 @@ Quanta_OBJECTS = \
 # External object files for target Quanta
 Quanta_EXTERNAL_OBJECTS =
 
+Quanta: CMakeFiles/Quanta.dir/src/REPL.c.o
 Quanta: CMakeFiles/Quanta.dir/src/VM.c.o
 Quanta: CMakeFiles/Quanta.dir/src/instruction.c.o
 Quanta: CMakeFiles/Quanta.dir/src/main.c.o
 Quanta: CMakeFiles/Quanta.dir/src/program.c.o
 Quanta: CMakeFiles/Quanta.dir/build.make
 Quanta: CMakeFiles/Quanta.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Quanta"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hellbats/Code/QuantaVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Quanta"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Quanta.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
