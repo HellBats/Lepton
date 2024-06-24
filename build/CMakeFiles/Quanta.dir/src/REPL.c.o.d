@@ -41,4 +41,5 @@ CMakeFiles/Quanta.dir/src/REPL.c.o: \
  /usr/include/bits/stdlib-float.h \
  /home/hellbats/Code/QuantaVM/src/include/instruction.h \
  /home/hellbats/Code/QuantaVM/src/include/VM.h \
- /home/hellbats/Code/QuantaVM/src/include/program.h
+ /home/hellbats/Code/QuantaVM/src/include/program.h \
+ /home/hellbats/Code/QuantaVM/src/include/lexer.h

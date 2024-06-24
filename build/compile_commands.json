@@ -19,6 +19,12 @@
 },
 {
   "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/lexer.c.o -c /home/hellbats/Code/QuantaVM/src/lexer.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/lexer.c",
+  "output": "CMakeFiles/Quanta.dir/src/lexer.c.o"
+},
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
   "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/main.c.o -c /home/hellbats/Code/QuantaVM/src/main.c",
   "file": "/home/hellbats/Code/QuantaVM/src/main.c",
   "output": "CMakeFiles/Quanta.dir/src/main.c.o"
