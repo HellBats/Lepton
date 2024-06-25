@@ -20,10 +20,7 @@ CMakeFiles/Quanta.dir/src/REPL.c.o: \
  /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h \
- /home/hellbats/Code/QuantaVM/src/include/REPL.h \
- /home/hellbats/Code/QuantaVM/src/include/VM.h \
- /home/hellbats/Code/QuantaVM/src/include/program.h /usr/include/stdlib.h \
+ /usr/include/bits/stdint-least.h /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
  /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
@@ -39,7 +36,11 @@ CMakeFiles/Quanta.dir/src/REPL.c.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h \
+ /home/hellbats/Code/QuantaVM/src/include/REPL.h \
+ /home/hellbats/Code/QuantaVM/src/include/VM.h \
+ /home/hellbats/Code/QuantaVM/src/include/program.h \
  /home/hellbats/Code/QuantaVM/src/include/instruction.h \
  /home/hellbats/Code/QuantaVM/src/include/VM.h \
  /home/hellbats/Code/QuantaVM/src/include/program.h \
- /home/hellbats/Code/QuantaVM/src/include/lexer.h
+ /home/hellbats/Code/QuantaVM/src/include/lexer.h \
+ /home/hellbats/Code/QuantaVM/src/include/parser.h

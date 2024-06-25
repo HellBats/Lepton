@@ -13,6 +13,6 @@ typedef struct REPL
 
 REPL NewREPL();
 void RunREPL(REPL *repl);
-int ParseHex(REPL *repl);
-uint16_t ParseHexAider(char hex_string[],int i,int f);
+int ParseHex(REPL *repl,char *hex);
+uint16_t ParseHexAider(char* hex_string,int i,int f);
 #endif

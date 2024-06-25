@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Quanta.dir/src/lexer.c.o.d"
   "CMakeFiles/Quanta.dir/src/main.c.o"
   "CMakeFiles/Quanta.dir/src/main.c.o.d"
+  "CMakeFiles/Quanta.dir/src/parser.c.o"
+  "CMakeFiles/Quanta.dir/src/parser.c.o.d"
   "CMakeFiles/Quanta.dir/src/program.c.o"
   "CMakeFiles/Quanta.dir/src/program.c.o.d"
   "Quanta"

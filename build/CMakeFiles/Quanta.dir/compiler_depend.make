@@ -6,6 +6,7 @@ CMakeFiles/Quanta.dir/src/REPL.c.o: /home/hellbats/Code/QuantaVM/src/REPL.c \
   /home/hellbats/Code/QuantaVM/src/include/VM.h \
   /home/hellbats/Code/QuantaVM/src/include/instruction.h \
   /home/hellbats/Code/QuantaVM/src/include/lexer.h \
+  /home/hellbats/Code/QuantaVM/src/include/parser.h \
   /home/hellbats/Code/QuantaVM/src/include/program.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
@@ -302,6 +303,42 @@ CMakeFiles/Quanta.dir/src/main.c.o: /home/hellbats/Code/QuantaVM/src/main.c \
   /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stddef.h \
   /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stdint.h
 
+CMakeFiles/Quanta.dir/src/parser.c.o: /home/hellbats/Code/QuantaVM/src/parser.c \
+  /home/hellbats/Code/QuantaVM/src/include/instruction.h \
+  /home/hellbats/Code/QuantaVM/src/include/parser.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-lp64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/sys/cdefs.h \
+  /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stdarg.h \
+  /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stddef.h \
+  /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stdint.h
+
 CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.c \
   /home/hellbats/Code/QuantaVM/src/include/program.h \
   /usr/include/alloca.h \
@@ -355,8 +392,6 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
   /usr/lib/gcc/aarch64-unknown-linux-gnu/14.1.1/include/stdint.h
 
 
-/home/hellbats/Code/QuantaVM/src/program.c:
-
 /home/hellbats/Code/QuantaVM/src/lexer.c:
 
 /home/hellbats/Code/QuantaVM/src/VM.c:
@@ -381,6 +416,8 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 
 /usr/include/stdlib.h:
 
+/usr/include/stdint.h:
+
 /usr/include/string.h:
 
 /usr/include/bits/time64.h:
@@ -389,21 +426,15 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 
 /usr/include/bits/wchar.h:
 
+/home/hellbats/Code/QuantaVM/src/program.c:
+
+/home/hellbats/Code/QuantaVM/src/include/parser.h:
+
 /usr/include/bits/stdint-least.h:
 
 /usr/include/alloca.h:
 
 /usr/include/bits/stdint-intn.h:
-
-/usr/include/bits/struct_mutex.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/gnu/stubs-lp64.h:
 
 /usr/include/stdc-predef.h:
 
@@ -415,11 +446,13 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 
 /usr/include/bits/libc-header-start.h:
 
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/floatn.h:
+
 /home/hellbats/Code/QuantaVM/src/REPL.c:
 
 /usr/include/bits/types/locale_t.h:
-
-/usr/include/bits/types.h:
 
 /home/hellbats/Code/QuantaVM/src/include/instruction.h:
 
@@ -428,6 +461,16 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/bits/floatn-common.h:
+
+/usr/include/bits/struct_mutex.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/gnu/stubs-lp64.h:
 
 /usr/include/bits/thread-shared-types.h:
 
@@ -443,9 +486,7 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 
 /usr/include/bits/waitflags.h:
 
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/bits/floatn.h:
+/usr/include/bits/types.h:
 
 /usr/include/bits/types/FILE.h:
 
@@ -464,6 +505,8 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 /usr/include/bits/wordsize.h:
 
 /usr/include/bits/types/__locale_t.h:
+
+/home/hellbats/Code/QuantaVM/src/parser.c:
 
 /usr/include/bits/types/__mbstate_t.h:
 
@@ -500,5 +543,3 @@ CMakeFiles/Quanta.dir/src/program.c.o: /home/hellbats/Code/QuantaVM/src/program.
 /usr/include/features.h:
 
 /usr/include/gnu/stubs.h:
-
-/usr/include/stdint.h:

@@ -31,6 +31,12 @@
 },
 {
   "directory": "/home/hellbats/Code/QuantaVM/build",
+  "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/parser.c.o -c /home/hellbats/Code/QuantaVM/src/parser.c",
+  "file": "/home/hellbats/Code/QuantaVM/src/parser.c",
+  "output": "CMakeFiles/Quanta.dir/src/parser.c.o"
+},
+{
+  "directory": "/home/hellbats/Code/QuantaVM/build",
   "command": "/usr/bin/cc  -I/home/hellbats/Code/QuantaVM/src -g -o CMakeFiles/Quanta.dir/src/program.c.o -c /home/hellbats/Code/QuantaVM/src/program.c",
   "file": "/home/hellbats/Code/QuantaVM/src/program.c",
   "output": "CMakeFiles/Quanta.dir/src/program.c.o"
