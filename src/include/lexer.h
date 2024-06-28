@@ -2,6 +2,6 @@
 #define LEXER_DOT_H
 #include"include/instruction.h"
 
-void Tokenize(Inst* instruct,char instruction[]);
+int Tokenize(Inst* instruct,char instruction[]);
 
 #endif

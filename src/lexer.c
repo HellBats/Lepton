@@ -3,7 +3,7 @@
 #include"include/instruction.h"
 #include<stdio.h>
 #define NO_OF_TOKENS 5
-void Tokenize(Inst* instruct,char instruction[])
+int Tokenize(Inst* instruct,char instruction[])
 {
     char* tokens[NO_OF_TOKENS];
     for(int i=0;i<NO_OF_TOKENS;i++)
@@ -11,7 +11,7 @@ void Tokenize(Inst* instruct,char instruction[])
         tokens[i] = (char*)malloc(8); 
     }
     int i = 0,k=0;
-    for(int j=0;instruction[j]!=0;j++)
+    for(int j=0;instruction[j]!='\n';j++)
     {
         if(instruction[j]==0){break;}
         if(instruction[j]==' ')
@@ -28,11 +28,12 @@ void Tokenize(Inst* instruct,char instruction[])
     }
     *(tokens[i]+k) = 0;
     *(tokens[i+1]) = 0;
-    SetInst(instruct,tokens);
+    int result = SetInst(instruct,tokens);
     for(int i=0;i<NO_OF_TOKENS;i++)
     {
         free(tokens[i]);
     }
+    return result;
 }
 
 

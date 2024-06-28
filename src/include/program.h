@@ -9,7 +9,7 @@ typedef struct Vector
 } vector;
 
 vector* NewVec(unsigned int size);
-void Reallocate(vector *vec);
+void Reallocate(vector *vec,int size);
 uint8_t vecget(vector *vec,unsigned int index);
 void vecset(vector *vec,unsigned int index,uint8_t value);
 #endif

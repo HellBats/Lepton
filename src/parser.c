@@ -1,165 +1,160 @@
 #include"include/parser.h"
 #include"include/instruction.h"
 #include<stdio.h>
-char* Parser(Inst *instruct,char *hex_string)
+
+void Parser(Inst *instruct,char *hex_string)
 {
     switch (instruct->opcode)
     {
-    case LOAD:
-        if(instruct->operands_no==1 && instruct->registers_no==1)
-        {
-            ParseDecToHex2(1,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex4((int)instruct->operands[0],hex_string,6); 
-            return hex_string;
+        case LOAD:
+            if(instruct->operands_no==1 && instruct->registers_no==1)
+            {
+                ParseDecToHex2(1,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex4((int)instruct->operands[0],hex_string,6); 
+            }
+            break;
+        case ADD:
+            if(instruct->operands_no==0 && instruct->registers_no==3)
+            {
+                ParseDecToHex2(2,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
+            }
+            break;
+        case SUB:
+            if(instruct->operands_no==0 && instruct->registers_no==3)
+            {
+                ParseDecToHex2(3,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
+            }
+            break;
+        case MUL:
+            if(instruct->operands_no==0 && instruct->registers_no==3)
+            {
+                ParseDecToHex2(4,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
+            }
+            break;
+        case DIV:
+            if(instruct->operands_no==0 && instruct->registers_no==3)
+            {
+                ParseDecToHex2(5,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
+            }
+            break;
+        case JMP:
+            if(instruct->operands_no==0 && instruct->registers_no==1)
+            {
+                ParseDecToHex2(6,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2(0,hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case JMPF:
+            if(instruct->operands_no==0 && instruct->registers_no==1)
+            {
+                ParseDecToHex2(7,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2(0,hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case JMPB:
+            if(instruct->operands_no==0 && instruct->registers_no==1)
+            {
+                ParseDecToHex2(8,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2(0,hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case EQ:
+            if(instruct->operands_no==0 && instruct->registers_no==2)
+            {
+                ParseDecToHex2(9,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case NEQ:
+            if(instruct->operands_no==0 && instruct->registers_no==2)
+            {
+                ParseDecToHex2(10,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case GT:
+            if(instruct->operands_no==0 && instruct->registers_no==2)
+            {
+                ParseDecToHex2(11,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case LT:
+            if(instruct->operands_no==0 && instruct->registers_no==2)
+            {
+                ParseDecToHex2(12,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case GTQ:
+            if(instruct->operands_no==0 && instruct->registers_no==2)
+            {
+                ParseDecToHex2(13,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case LTQ:
+            if(instruct->operands_no==0 && instruct->registers_no==2)
+            {
+                ParseDecToHex2(14,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2((int)instruct->registers[1],hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case JEQ:
+            if(instruct->operands_no==0 && instruct->registers_no==1)
+            {
+                ParseDecToHex2(15,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2(0,hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        case ALOC:
+            if(instruct->operands_no==0 && instruct->registers_no==1)
+            {
+                ParseDecToHex2(16,hex_string,0);
+                ParseDecToHex2((int)instruct->registers[0],hex_string,3);
+                ParseDecToHex2(0,hex_string,6);
+                ParseDecToHex2(0,hex_string,9); 
+            }
+            break;
+        default:
+            break;
         }
-        break;
-    case ADD:
-        if(instruct->operands_no==0 && instruct->registers_no==3)
-        {
-            ParseDecToHex2(2,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case SUB:
-        if(instruct->operands_no==0 && instruct->registers_no==3)
-        {
-            ParseDecToHex2(3,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case MUL:
-        if(instruct->operands_no==0 && instruct->registers_no==3)
-        {
-            ParseDecToHex2(4,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case DIV:
-        if(instruct->operands_no==0 && instruct->registers_no==3)
-        {
-            ParseDecToHex2(5,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2((int)instruct->registers[2],hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case JMP:
-        if(instruct->operands_no==0 && instruct->registers_no==1)
-        {
-            ParseDecToHex2(6,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2(0,hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case JMPF:
-        if(instruct->operands_no==0 && instruct->registers_no==1)
-        {
-            ParseDecToHex2(7,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2(0,hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case JMPB:
-        if(instruct->operands_no==0 && instruct->registers_no==1)
-        {
-            ParseDecToHex2(8,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2(0,hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case EQ:
-        if(instruct->operands_no==0 && instruct->registers_no==2)
-        {
-            ParseDecToHex2(9,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case NEQ:
-        if(instruct->operands_no==0 && instruct->registers_no==2)
-        {
-            ParseDecToHex2(10,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case GT:
-        if(instruct->operands_no==0 && instruct->registers_no==2)
-        {
-            ParseDecToHex2(11,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case LT:
-        if(instruct->operands_no==0 && instruct->registers_no==2)
-        {
-            ParseDecToHex2(12,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case GTQ:
-        if(instruct->operands_no==0 && instruct->registers_no==2)
-        {
-            ParseDecToHex2(13,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case LTQ:
-        if(instruct->operands_no==0 && instruct->registers_no==2)
-        {
-            ParseDecToHex2(14,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2((int)instruct->registers[1],hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    case JEQ:
-        if(instruct->operands_no==0 && instruct->registers_no==1)
-        {
-            ParseDecToHex2(15,hex_string,0);
-            ParseDecToHex2((int)instruct->registers[0],hex_string,3);
-            ParseDecToHex2(0,hex_string,6);
-            ParseDecToHex2(0,hex_string,9); 
-            return hex_string;
-        }
-        break;
-    default:
-        break;
-    }
 }
 
-char* ParseDecToHex2(int a,char *hex,int n)
+void ParseDecToHex2(int a,char *hex,int n)
 {
     int temp,i;
     for(i=n;i<n+2;i++)
@@ -171,10 +166,9 @@ char* ParseDecToHex2(int a,char *hex,int n)
         a /=16;
     }
     *(hex+i) = 32;
-    return hex;
 }
 
-char* ParseDecToHex4(int a,char *hex,int n)
+void ParseDecToHex4(int a,char *hex,int n)
 {
     int temp,i;
     for(i=n;i<n+5;i++)
@@ -190,5 +184,4 @@ char* ParseDecToHex4(int a,char *hex,int n)
         }
     }
     *(hex+i) = 32;
-    return hex;
 }

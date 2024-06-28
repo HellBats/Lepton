@@ -8,7 +8,8 @@ typedef struct VM
 {
     int registers[32];
     unsigned int program_counter;
-    vector *program;
+    vector* program;
+    vector* heap;
     unsigned int remainder;
     uint8_t equal_flag;
 } VM;

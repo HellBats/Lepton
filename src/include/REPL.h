@@ -1,12 +1,11 @@
 #ifndef REPL_DOT_H
 #define REPL_DOT_H
-#include<stdio.h>
 #include<stdint.h>
 #include"include/VM.h"
 
 typedef struct REPL
 {
-    char command_buffer[20];
+    char command_buffer[40];
     int command_length;
     VM vm;
 }REPL;

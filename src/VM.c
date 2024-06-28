@@ -10,8 +10,10 @@ VM NewVM(unsigned int size)
     {
         vm.registers[i] = 0;
     }
-    vector *vec = NewVec(4*size);
-    vm.program = vec;
+    vector *prog = NewVec(size);
+    vm.program = prog;
+    vector *heap = NewVec(size);
+    vm.heap = heap;
     vm.program_counter = 0;
     return vm;
 }
@@ -68,6 +70,8 @@ uint8_t ExecuteInstruction(VM *vm)
         uint8_t register3;
         case HLT:
             printf("Halted\n");
+            Next8bits(vm);
+            Next16bits(vm);
             return 1;
         case LOAD:
             register_no = Next8bits(vm);
@@ -115,36 +119,42 @@ uint8_t ExecuteInstruction(VM *vm)
             register2 = Next8bits(vm);
             Next8bits(vm);
             if(vm->registers[register1]==vm->registers[register2]){vm->equal_flag=1;}
+            else{vm->equal_flag=0;}
             break;
         case NEQ:
             register1 = Next8bits(vm);
             register2 = Next8bits(vm);
             Next8bits(vm);
             if(vm->registers[register1]!=vm->registers[register2]){vm->equal_flag=1;}
+            else{vm->equal_flag=0;}
             break;
         case LT:
             register1 = Next8bits(vm);
             register2 = Next8bits(vm);
             Next8bits(vm);
             if(vm->registers[register1]<vm->registers[register2]){vm->equal_flag=1;}
+            else{vm->equal_flag=0;}
             break;
         case GT:
             register1 = Next8bits(vm);
             register2 = Next8bits(vm);
             Next8bits(vm);
             if(vm->registers[register1]>vm->registers[register2]){vm->equal_flag=1;}
+            else{vm->equal_flag=0;}
             break;
         case LTQ:
             register1 = Next8bits(vm);
             register2 = Next8bits(vm);
             Next8bits(vm);
             if(vm->registers[register1]<=vm->registers[register2]){vm->equal_flag=1;}
+            else{vm->equal_flag=0;}
             break;
         case GTQ:
             register1 = Next8bits(vm);
             register2 = Next8bits(vm);
             Next8bits(vm);
             if(vm->registers[register1]>=vm->registers[register2]){vm->equal_flag=1;}
+            else{vm->equal_flag=0;}
             break;
         case JEQ:
             if(vm->equal_flag)
@@ -158,6 +168,10 @@ uint8_t ExecuteInstruction(VM *vm)
                 Next16bits(vm);
             }
             break;
+        case ALOC:
+            register1 = Next8bits(vm);
+            Next16bits(vm);
+            Reallocate(vm->heap,vm->registers[register1]);
         default:
             printf("Illegal statement\n");
             return 1;

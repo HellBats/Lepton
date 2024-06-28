@@ -7,48 +7,73 @@ Inst NewInst()
     return instruction;
 }
 
-void SetInst(Inst *instruct,char* instructions[])
+int SetInst(Inst *instruct,char* instructions[])
 {
-    SetOpcode(instruct,instructions);
     int register_no = 0,operand_no= 0;
-    for(int i=1;*(instructions[i])!=0;i++)
+    int opcode_flag = 0;
+    for(int i=0;*(instructions[i])!=0;i++)
     {
+        if(*(instructions[i])=='.')
+        {
+
+        }
+        else if(*(instructions[i])=='@')
+        {
+
+        }
+        else if(*(instructions[i])=='?')
+        {
+
+        }
         if(*(instructions[i])=='$')
         {
-            instruct->registers[register_no] = SetRegister(instruct,instructions,i);
+            instruct->registers[register_no] = SetRegister(instructions,i);
             register_no++;
         }
-        if(*(instructions[i])=='#')
+        else if(*(instructions[i])=='#')
         {
-            instruct->operands[operand_no] = SetOperand(instruct,instructions,i);
+            instruct->operands[operand_no] = SetOperand(instructions,i);
             operand_no++;
+        }
+        else
+        {
+            Opcode code = SetOpcode(instructions,i);
+            if(code<0 || code>16 || opcode_flag>1)
+            {
+                return 0;
+            }
+            instruct->opcode = code;
+            opcode_flag++;
         }
     }
     instruct->registers_no = register_no;
     instruct->operands_no = operand_no;
+    return 1;
 }
 
-void SetOpcode(Inst *instruct,char* instructions[])
+Opcode SetOpcode(char* instructions[],int i)
 {
-    if(!strcmp(instructions[0],"load")){instruct->opcode = LOAD;}
-    else if(!strcmp(instructions[0],"add")){instruct->opcode = ADD;}
-    else if(!strcmp(instructions[0],"sub")){instruct->opcode = SUB;}
-    else if(!strcmp(instructions[0],"mul")){instruct->opcode = MUL;}
-    else if(!strcmp(instructions[0],"div")){instruct->opcode = DIV;}
-    else if(!strcmp(instructions[0],"jpm")){instruct->opcode = JMP;}
-    else if(!strcmp(instructions[0],"jmpf")){instruct->opcode = JMPF;}
-    else if(!strcmp(instructions[0],"jmpb")){instruct->opcode = JMPB;}
-    else if(!strcmp(instructions[0],"eq")){instruct->opcode = EQ;}
-    else if(!strcmp(instructions[0],"neq")){instruct->opcode = NEQ;}
-    else if(!strcmp(instructions[0],"gt")){instruct->opcode = GT;}
-    else if(!strcmp(instructions[0],"lt")){instruct->opcode = LT;}
-    else if(!strcmp(instructions[0],"gtq")){instruct->opcode = GTQ;}
-    else if(!strcmp(instructions[0],"ltq")){instruct->opcode = LTQ;}
-    else if(!strcmp(instructions[0],"jeq")){instruct->opcode = JEQ;}
-    else if(!strcmp(instructions[0],"hlt")){instruct->opcode = HLT;}
+    if(!strcmp(instructions[i],"load")){return LOAD;}
+    else if(!strcmp(instructions[i],"add")){return ADD;}
+    else if(!strcmp(instructions[i],"sub")){return SUB;}
+    else if(!strcmp(instructions[i],"mul")){return MUL;}
+    else if(!strcmp(instructions[i],"div")){return DIV;}
+    else if(!strcmp(instructions[i],"jpm")){return JMP;}
+    else if(!strcmp(instructions[i],"jmpf")){return JMPF;}
+    else if(!strcmp(instructions[i],"jmpb")){return JMPB;}
+    else if(!strcmp(instructions[i],"eq")){return EQ;}
+    else if(!strcmp(instructions[i],"neq")){return NEQ;}
+    else if(!strcmp(instructions[i],"gt")){return GT;}
+    else if(!strcmp(instructions[i],"lt")){return LT;}
+    else if(!strcmp(instructions[i],"gtq")){return GTQ;}
+    else if(!strcmp(instructions[i],"ltq")){return LTQ;}
+    else if(!strcmp(instructions[i],"jeq")){return JEQ;}
+    else if(!strcmp(instructions[i],"hlt")){return HLT;}
+    else if(!strcmp(instructions[i],"aloc")){return ALOC;}
+    else{printf("not a inst");}
 }
 
-uint8_t SetRegister(Inst *instruct,char* instructions[],int j)
+uint8_t SetRegister(char* instructions[],int j)
 {
     uint8_t registerr = 0;
     uint8_t numbers[4];
@@ -66,7 +91,7 @@ uint8_t SetRegister(Inst *instruct,char* instructions[],int j)
     return registerr;
 }
 
-uint16_t SetOperand(Inst *instruct,char* instructions[],int j)
+uint16_t SetOperand(char* instructions[],int j)
 {
     uint16_t operand = 0;
     uint16_t numbers[6];

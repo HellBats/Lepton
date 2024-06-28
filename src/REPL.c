@@ -1,15 +1,14 @@
-#include<stdio.h>
+// #include<stdio.h>
 #include<string.h>
-#include<stdint.h>
 #include<stdlib.h>
+#include<stdio.h>
 #include"include/REPL.h"
-#include"include/VM.h"
 #include"include/program.h"
 #include"include/lexer.h"
 #include"include/parser.h"
 REPL NewREPL()
 {
-    VM vm = NewVM(4*1); 
+    VM vm = NewVM(4); 
     REPL repl = {.command_length = 0,.vm = vm};
     return repl;
 }
@@ -28,27 +27,73 @@ void RunREPL(REPL *repl)
             printf("Farewell have a good day\n");
             break;
         }
-        if(!strcmp(repl->command_buffer,".registers"))
+        else if(!strcmp(repl->command_buffer,".registers"))
         {
             for(int i=0;i<32;i++)
             {
-                printf("%d\n",repl->vm.registers[i]);
+                printf("%d %d\n",i,repl->vm.registers[i]);
             }
+        }
+        else if(!strcmp(repl->command_buffer,".load_file"))
+        {
+            char path[40];
+            char instruction[40];
+            int instructions = 0;
+            printf("Enter the path to the file you wish to load: ");
+            scanf("%s",&path);
+            scanf("%c",&temp);
+            FILE *ptr = fopen(path,"r");
+            if(NULL == ptr)
+            {
+                printf("No such file exists\n");
+                continue;
+            }
+            while(fgets(instruction,40,ptr))
+            {
+                Inst inst  = NewInst();
+                char* hex_string = (char*)malloc(13*sizeof(char));
+                if(!Tokenize(&inst,instruction))
+                {
+                    printf("Illegal statement\n");
+                }
+                Parser(&inst,hex_string);
+                if(ParseHex(repl,hex_string))
+                {
+                    repl->vm.program_counter+=4;
+                    printf("%d\n",repl->vm.program->size);
+                }
+                else
+                {
+                    printf("Illegal statement\n");
+                }
+                instructions++;
+                free(hex_string);
+            }
+            repl->vm.program_counter -= instructions*4;
+            RunVM(&repl->vm);
+            fclose(ptr);
         }
         else
         {
+            for(int i=0;;i++)
+            {
+                if(repl->command_buffer[i]==0)
+                {
+                    repl->command_buffer[i] = '\n';
+                    break;
+                }
+            }
             Inst inst  = NewInst();
             char* hex_string = (char*)malloc(13*sizeof(char));
-            Tokenize(&inst,repl->command_buffer);
-            hex_string = Parser(&inst,hex_string);
-            // for(int i=0;i<13;i++)
-            // {
-            //     printf("%c\n",hex_string[i]);
-            // }
+            if(!Tokenize(&inst,repl->command_buffer))
+            {
+                printf("Illegal statement\n");
+            }
+            Parser(&inst,hex_string);
             if(ParseHex(repl,hex_string))
             {
                 RunOnceVM(&repl->vm);
-                printf("%d\n",repl->vm.program_counter);
+                // printf("%d\n",repl->vm.program_counter);
             }
             else
             {
