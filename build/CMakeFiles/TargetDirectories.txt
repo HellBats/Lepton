@@ -1,3 +1,0 @@
-/home/hellbats/Code/QuantaVM/build/CMakeFiles/Quanta.dir
-/home/hellbats/Code/QuantaVM/build/CMakeFiles/edit_cache.dir
-/home/hellbats/Code/QuantaVM/build/CMakeFiles/rebuild_cache.dir
